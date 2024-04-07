@@ -6,7 +6,7 @@ public class EnemyProjectile : Projectile
 {
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.TryGetComponent<Bird>(out Bird bird))
+        if (collision.TryGetComponent(out Bird bird))
         {
             bird.Die();
         }
